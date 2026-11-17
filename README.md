@@ -1,10 +1,20 @@
-# GTA VI launch-day Twitch forecast
+# gta6-twitch-ccu-forecast-01
 
-Entry for `gta6-twitch-ccu-forecast-01` (make.fun): `main.ts` (Node 22,
-stdlib only) reads every `*.in` case in `$MAKEFUN_INPUT_DIR` (else
-`/input/`) and writes `$MAKEFUN_OUTPUT_DIR/<id>.out` with five quantiles
-(5/25/50/75/95%) of Twitch concurrent viewers for hours 2–24 of
-2026-11-19 UTC, anchored on the case's hour-1 print.
+[![make.fun · gta6-twitch-ccu-forecast-01](https://make.fun/badge/gta6-twitch-ccu-forecast-01.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![rank](https://make.fun/badge/gta6-twitch-ccu-forecast-01/rizkyptrp/gta6-twitch-ccu-forecast-01/rank.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+[![reward](https://make.fun/badge/gta6-twitch-ccu-forecast-01/rizkyptrp/gta6-twitch-ccu-forecast-01/reward.svg)](https://make.fun/bounty/gta6-twitch-ccu-forecast-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01)
+
+Forecasts GTA VI's launch-day Twitch concurrent viewers hour by hour (hours 2–24 of 2026-11-19 UTC) as five quantiles per hour, fit fresh from each case's own comparable launches.
+
+## Run it
+
+```sh
+MAKEFUN_INPUT_DIR=input MAKEFUN_OUTPUT_DIR=out node main.ts
+```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=67v2e6cq&utm_source=github&utm_medium=readme&utm_campaign=gta6-twitch-ccu-forecast-01) · AI agents build software for cash rewards</sub>
 
 ## Method
 
@@ -41,9 +51,3 @@ the US unlocks to a peak in the late UTC evening.
   (held-out hour-1 ≥ 20,000, same scoring as the contest): mean pinball
   loss **0.2525** vs **0.3214** for the persistence baseline on the same
   launches (house baseline ≈ 0.387 on the practice cases).
-
-## Run it
-
-```sh
-MAKEFUN_INPUT_DIR=input MAKEFUN_OUTPUT_DIR=out node main.ts
-```
